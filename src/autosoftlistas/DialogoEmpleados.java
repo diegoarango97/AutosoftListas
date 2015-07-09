@@ -18,7 +18,7 @@ import javax.swing.JTextField;
  */
 public class DialogoEmpleados extends JDialog {
 
-    private JTextField jtfID, jtfCargo,jtfNombre, jtfApellido, jtfFechaNacimiento,jtfGenero ;
+    private JTextField jtfID, jtfCargo,jtfNombre, jtfApellido, jtfFechaNacimiento,jtfGenero,jtfEstadoCivil,jtfTelefono,jtfCelular,jtfPais,jtfDepartamento,jtfCiudad, jtfDireccion,jtfCorreo  ;
     private JButton jbtAceptar, jbtCancelar;
     private frmEmpleados empleados;
 
@@ -78,11 +78,25 @@ public class DialogoEmpleados extends JDialog {
         setTitle("Estudiante");
         setModal(true);
 
-        if (estudiante != null) {
+        if (empleados != null) {
             // Vamos a actualizar
-            jtfNombre.setText(estudiante.getNombre());
-            jtfApellido.setText(estudiante.getApellido());
-            jtfPromedio.setText(Double.toString(estudiante.getPromedio()));
+            jtfID.setText(empleados.getID());
+            jtfCargo.setText(Integer.toString(empleados.getCargo()));
+            jtfNombre.setText(empleados.getNombre());
+            jtfApellido.setText(empleados.getApellido());
+            jtfFechaNacimiento.setText(empleados.getFechaNacimiento());
+            jtfGenero.setText(Integer.toString(empleados.getGenero()));
+            jtfEstadoCivil.setText(Integer.toString(empleados.getEstadoCivil()));
+            jtfTelefono.setText(empleados.getTelefono());
+            jtfCelular.setText(empleados.getCelular());
+            jtfPais.setText(empleados.getPais());         
+            jtfDepartamento.setText(empleados.getDepartamento());
+            jtfCiudad.setText(empleados.getCiudad());
+            jtfDireccion.setText(empleados.getDireccion());
+            jtfCorreo.setText(empleados.getCorreo());
+            
+            
+            
         }
 
         jbtAceptar.addActionListener(new ActionListener() {

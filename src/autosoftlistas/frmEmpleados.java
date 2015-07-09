@@ -7,6 +7,7 @@ package autosoftlistas;
 public class frmEmpleados {
 
     private String ID;
+    private int cargo;
     private String nombre;
     private String apellido;
     private String fechaNacimiento;
@@ -20,8 +21,9 @@ public class frmEmpleados {
     private String direccion;
     private String correo;
     
-    public frmEmpleados(String ID, String nombre, String apellido, String fechaNacimiento, int genero, int estadoCivil, String telefono, String celular, String pais, String departamento, String ciudad, String direccion, String correo){
+    public frmEmpleados(String ID, int cargo,String nombre, String apellido, String fechaNacimiento, int genero, int estadoCivil, String telefono, String celular, String pais, String departamento, String ciudad, String direccion, String correo){
         this.ID = ID;
+        this.cargo=cargo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
@@ -34,6 +36,14 @@ public class frmEmpleados {
         this.ciudad = ciudad;
         this.direccion = direccion;
         this.correo = correo;
+    }
+
+    public int getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(int cargo) {
+        this.cargo = cargo;
     }
 
     public String getID() {
